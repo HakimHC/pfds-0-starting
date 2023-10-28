@@ -27,8 +27,8 @@ def main():
     min_len = int(argv[2])
 
     iter = argv[1].split(" ")
-    res = ft_filter(lambda x: len(x) >= min_len, iter)
-    print(res)
+    res = filter(lambda x: len(x) >= min_len, iter)
+    print([ i for i in res ])
 
 
 
