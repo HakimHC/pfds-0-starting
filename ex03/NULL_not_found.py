@@ -1,9 +1,11 @@
-EXIT_SUCCESS = 0
-EXIT_FAILURE = 1
-
 from types import NoneType
 from typing import Any
 import math
+
+
+EXIT_SUCCESS = 0
+EXIT_FAILURE = 1
+
 
 def NULL_not_found(object: Any) -> int:
     ret = EXIT_FAILURE

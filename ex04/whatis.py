@@ -11,12 +11,13 @@ def valid_args(argc: int) -> bool:
         ret = False
     return ret
 
+
 def main():
     argc = len(sys.argv)
 
     if not valid_args(argc):
         return
-    
+
     arg = sys.argv[1]
     success = True
     int_arg = 0
@@ -35,7 +36,6 @@ def main():
     if int_arg % 2 == 0:
         res = "Im Even"
     print(res)
-
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 import sys
 
+
 NESTED_MORSE = {
     "A": ".-",
     "B": "-...",
@@ -66,17 +67,18 @@ NESTED_MORSE = {
     " ": "/",
 }
 
+
 def main():
     """ Main function """
     argv = sys.argv
     argc = len(argv)
 
     try:
-        assert argc == 2, "Invalid Arguments";
+        assert argc == 2, "Invalid Arguments"
     except AssertionError as e:
         print(f"{ type(e).__name__ }: { str(e) }")
         return
-    
+
     try:
         if any(c not in NESTED_MORSE for c in argv[1]):
             raise AssertionError("arguments are bad")
@@ -84,8 +86,9 @@ def main():
         print(f"{ type(e).__name__ }: { str(e) }")
         return
 
-    res = " ".join([ NESTED_MORSE[c] for c in argv[1] ])
+    res = " ".join([NESTED_MORSE[c] for c in argv[1]])
     print(res)
-    
+
+
 if __name__ == "__main__":
     main()
